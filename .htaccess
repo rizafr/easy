@@ -1,0 +1,15 @@
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} !=mobile.izi.or.id
+#RewriteCond %{HTTP_HOST} !=api.mobile.izi.or.id
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+#RewriteCond %{HTTP_HOST} ^izi\.or\.id$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.izi\.or\.id$
+#RewriteRule ^/?$ "https\:\/\/www\.izi\.or\.id\/" [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php/$0 [PT,L]

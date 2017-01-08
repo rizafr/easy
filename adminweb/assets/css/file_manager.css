@@ -1,0 +1,341 @@
+body.file-manager-body {
+	background-color: #ffffff;
+}
+
+body.file-manager-body * {
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.file-manager-wrapper {
+	position: relative;
+}
+
+.file-manager-display img {
+	max-height: 300px;
+}
+
+.file-manager-display video {
+	height: 300px;
+	background-color: #252525;
+}
+
+.file-manager-display .file-manager-list {
+	position: relative;
+	margin: 2px 0;
+	border: 1px solid #e2e2e2;
+	cursor: default;
+
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+
+	transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+.file-manager-display .file-manager-list:hover {
+	border-color: #cccccc;
+}
+
+.file-manager-list .remove-file {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	margin-top: -0.5em;
+	color: #999999;
+	cursor: pointer;
+}
+.file-manager-list .remove-file:hover {
+	color: #666666;
+}
+
+.file-manager, .uploader-manager {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	border: 1px solid #cfcfcf;
+}
+
+.uploader-manager {
+	opacity: 0;
+	-o-opacity: 0;
+	-ms-opacity: 0;
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	visibility: hidden;
+
+	transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+
+.uploader-manager.show {
+	opacity: 1;
+	-o-opacity: 1;
+	-ms-opacity: 1;
+	-moz-opacity: 1;
+	-webkit-opacity: 1;
+	visibility: visible;
+}
+
+.uploader-manager .dropzone {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(100,100,100,0.8);
+	overflow: auto;
+}
+
+.file-manager * {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.dir-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	overflow-y: auto;
+}
+
+.file-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-left: 1px solid #cfcfcf;
+}
+
+.menu-wrapper {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	left: 15px;
+	height: 85px;
+	margin-right: -15px;
+	margin-left: -15px;
+	background-color: #efefef;
+	border-left: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+.file-wrapper {
+	position: absolute;
+	top: 85px;
+	right: 15px;
+	bottom: 40px;
+	left: 0;
+	margin-right: -15px;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #ffffff;
+	overflow-y: auto;
+}
+
+.size-wrapper {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	left: 0;
+	height: 40px;
+	margin-right: -15px;
+	background-color: #efefef;
+	border-top: 1px solid #cfcfcf;
+}
+
+.totalsize {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	padding-right: 15px;
+}
+
+.root-wrapper {
+	float: left;
+}
+
+.root-wrapper ul.root {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.root-wrapper ul.root ul.root {
+	padding-left: 16px;
+}
+
+.root-wrapper .root-content {
+	clear: left;
+	float: left;
+}
+
+.root-folder {
+	display: block;
+	float: left;
+	clear: left;
+	color: #252525;
+}
+
+.root-folder .root-holder {
+	display: block;
+	float: left;
+	white-space: nowrap;
+	margin: 1px 0;
+	padding: 1px 5px;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+
+.root-folder .root-holder:hover {
+	cursor: pointer;
+	background-color: #efefef;
+}
+
+.root-folder .root-holder.active {
+	background-color: #e2e2e2;
+}
+
+.root-holder.active > i {
+	color: #f0ad4e;
+}
+
+.root-folder.collapsed > .root-content {
+	display: none;
+}
+
+.menu-wrapper > div {
+	height: 40px;
+	line-height: 40px;
+}
+
+.menu-wrapper a {
+	cursor: pointer;
+}
+
+.menu-wrapper input.current-dir {
+	background-color: #ffffff;
+	border: 1px solid #e2e2e2;
+	padding: 0 5px;
+	margin: 8px 0 0 0;
+	line-height: 28px;
+	width: 100%;
+}
+
+.file-box {
+	margin: 10px;
+}
+
+.file-item {
+	float: none;
+	display: inline-block;
+	min-height: 100px;
+	padding: 5px 5px;
+	text-align: center;
+	vertical-align: top;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+.file-item .file-content {
+	padding: 10px 5px;
+	cursor: pointer;
+	box-shadow: 1px 1px 3px #ffffff;
+	-o-box-shadow: 1px 1px 3px #ffffff;
+	-ms-box-shadow: 1px 1px 3px #ffffff;
+	-moz-box-shadow: 1px 1px 3px #ffffff;
+	-webkit-box-shadow: 1px 1px 3px #ffffff;
+
+	transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+.file-item:hover .file-content {
+	background-color: #f6f6f6;
+	box-shadow: 1px 1px 3px #afafaf;
+	-o-box-shadow: 1px 1px 3px #afafaf;
+	-ms-box-shadow: 1px 1px 3px #afafaf;
+	-moz-box-shadow: 1px 1px 3px #afafaf;
+	-webkit-box-shadow: 1px 1px 3px #afafaf;
+}
+.file-item.active .file-content {
+	background-color: #efefef;
+	box-shadow: 1px 1px 3px #999999;
+	-o-box-shadow: 1px 1px 3px #999999;
+	-ms-box-shadow: 1px 1px 3px #999999;
+	-moz-box-shadow: 1px 1px 3px #999999;
+	-webkit-box-shadow: 1px 1px 3px #999999;
+}
+
+.file-item .file-info {
+	padding: 0 10px;
+}
+
+.file-item small {
+	display: block;
+}
+
+.file-item .thumb {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5px;
+	color: #666666;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.file-item .thumb i {
+	font-size: 72px;
+	line-height: 100px;
+}
+
+.file-manager .btn {
+	margin-top: 10px;
+}
+
+.file-manager .btn.pull-right {
+	margin-left: 5px;
+}
+.file-manager .btn.pull-left {
+	margin-right: 5px;
+}
+
+input[type="text"].input-large {
+	height: 34px !important;
+}
+.close-uploader {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}

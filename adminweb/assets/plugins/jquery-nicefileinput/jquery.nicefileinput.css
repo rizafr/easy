@@ -1,0 +1,87 @@
+.relative {
+	position: relative;
+}
+.fileinput-wrapper {
+	position: relative;
+	float: left;
+
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	   -moz-border-radius-topleft: 3px; 
+	   -moz-border-radius-bottomleft: 3px;
+	        border-top-left-radius: 3px; 
+	        border-bottom-left-radius: 3px;
+
+	background-color: #0192DD;
+
+	background-image: linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -o-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -moz-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -ms-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #1774A3),
+		color-stop(0.56, #0194DD)
+	);
+	text-shadow: 0px -1px 0px #0172bd;
+	border: solid #0172bd 1px;
+	border-bottom: solid #00428d 1px;
+	
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	   -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	    box-shadow: inset 0px 1px 0px rgba(255,255,255,.2); 	
+	
+	color: #fff;
+	width: 32%;
+	height: 34px !important;
+	line-height: 34px !important;
+	text-align: center;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	-webkit-transition: all 0.5s ease-out;
+	   -moz-transition: all 0.5s ease-out;
+	    -ms-transition: all 0.5s ease-out;
+	     -o-transition: all 0.5s ease-out;
+	        transition: all 0.5s ease-out;
+}
+
+.fileinput-wrapper:hover {
+	background: #333;
+	text-shadow: 0px -1px 0px #111;
+	border: solid #000 1px;
+	cursor: pointer;
+}
+
+.fileinput-wrapper > input[type="file"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100px;
+	width: 200px;
+	-webkit-opacity: 0;
+	   -moz-opacity: 0;
+	    -ms-opacity: 0;
+	     -o-opacity: 0;
+	        opacity: 0;
+	filter: alpha(opacity=0);
+	border: none;
+}
+
+.fileinput-wrapper > input[type="file"]:hover {
+	cursor: pointer;
+}
+
+.filename-wrapper {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 68%;
+	cursor: default !important;
+	height: 34px !important;
+	line-height: 34px !important;
+	box-sizing: border-box;
+}
